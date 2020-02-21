@@ -1,0 +1,14 @@
+#DrJava configuration file
+#Thu Jan 02 04:25:14 PST 2020
+key.delete.next = [shift DELETE]
+key.delete.previous = [shift BACK_SPACE]
+recent.files = [C:\\Users\\Alchemy\\Desktop\\akshat\\akki\\Elevator.java,C:\\Users\\Alchemy\\Desktop\\akshat\\akki\\IfElse.java,C:\\Users\\Alchemy\\Desktop\\akshat\\akki\\IfElseDate.java,C:\\Users\\Alchemy\\Desktop\\akshat\\akki\\Employee.java,C:\\Users\\Alchemy\\Desktop\\akshat\\akki\\Employees.java]
+window.height = 744
+window.width = 1382
+window.x = -8
+window.y = -8
+window.state = 6
+last.dir = C:\\Users\\Alchemy\\Desktop\\akshat\\akki\\Elevator.java
+last.interactions.dir = C:\\Users\\Alchemy\\Desktop\\akshat\\akki
+tabbedpanes.state = 683 384 700 400
+new.version.notification.last = 1577768405668

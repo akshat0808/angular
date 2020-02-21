@@ -1,0 +1,120 @@
+<div class="container">
+  <div><h1 class="far fa-registered">Registeration</h1></div>
+
+  <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <!-- {{ userForm.value | json }}
+
+    <br />
+
+    {{ userModel | json }} -->
+
+    <div class="form-group">
+      <label for="">Username</label>
+      <input
+        #userName="ngModel" 
+        [(ngModel)]="userModel.username"
+        name="username"
+        type="text"
+        class="form-control"
+        required
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="userName.valid || userName.untouched">
+        This is mandatory field..!!
+      </small>
+    </div>
+   
+    <div class="form-group">
+      <label for="">Password</label>
+      <input
+        [(ngModel)]="userModel.password"
+        name="password"
+        type="password"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="">Phone</label>
+      <input
+        [(ngModel)]="userModel.phone"
+        name="phone"
+        [class.is-invalid]="phone.invalid && phone.touched"
+        type="tel"
+        #phone="ngModel"
+        class="form-control"
+        required pattern="^\d{10}$"
+      />
+      <!-- <small class="text-danger"
+          [class.d-none]="phone.valid || phone.untouched">
+          required and should be valid
+      </small> -->
+      <div *ngIf="phone.errors && (phone.invalid && phone.touched)">
+          <small *ngIf="phone.errors.required"class="text-danger">Mandatory</small>
+          <small *ngIf="phone.errors.pattern"class="text-danger">Invalid Number</small>
+
+      </div>
+    </div>
+    <!-- {{ phone.touched }} -->
+    <div class="form-group">
+      <label for="">Email</label>
+      <input
+        [(ngModel)]="userModel.email"
+        name="email"
+        type="email"
+        id=""
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label>Category</label>
+      <select
+        [(ngModel)]="userModel.category"
+        name="category"
+        class="form-control"
+      >
+        <option value="">---select category---</option>
+        <option *ngFor="let category of categories">{{ category }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      Gender
+      <div class="form-check form-check-inline">
+        <input
+          [(ngModel)]="userModel.gender"
+          class="form-check-input"
+          type="radio"
+          value="male"
+          name="gender"
+        />
+        <label class="form-check-label">Male</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          [(ngModel)]="userModel.gender"
+          class="form-check-input"
+          type="radio"
+          value="female"
+          name="gender"
+        />
+        <label class="form-check-label">Female</label>
+      </div>
+    </div>
+    <div class="form-group">
+      Subscribe
+      <div class="form-check">
+        <input
+          [(ngModel)]="userModel.subscribe"
+          name="subscribe"
+          type="checkbox"
+          class="form-check-input"
+        />
+      </div>
+      <br />
+    </div>
+    <div class="form-group">
+        
+      <button [disabled]="!userForm.valid" class="btn btn-primary" value="register" type="submit">Submit</button>
+    </div>
+  </form>
+</div>

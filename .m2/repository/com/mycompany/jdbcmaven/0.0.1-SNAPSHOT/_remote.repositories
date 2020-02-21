@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 14 17:42:06 IST 2020
+jdbcmaven-0.0.1-SNAPSHOT.jar>=
+jdbcmaven-0.0.1-SNAPSHOT.pom>=

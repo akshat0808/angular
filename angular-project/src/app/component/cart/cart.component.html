@@ -1,0 +1,22 @@
+<div class="container">
+    <!-- <ul *ngFor="let product of cart">
+        <li>
+            <img src="{{_image_url+product.image}}" alt="" height="50" width="40">
+            {{product.productName}}
+            {{ product.mrp * 71.54 | currency: 'EUR' }}
+        </li>
+    </ul> -->
+
+    <table class="table">
+        <tbody>
+            <tr *ngFor="let product of cart" >
+                <td><img src="{{_image_url+product.image}}" alt="" height="70" width="55"></td>
+                    <td>{{product.productName}}</td>
+                    <td>{{ product.mrp * 71.54 | currency: 'INR' }}</td>
+                    <td><i class="far fa-trash-alt"></i></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+

@@ -1,0 +1,9 @@
+[filesystem "192.168.1.227|Oracle Corporation|1.8.0_231|881605869"]
+	timestampResolution = 1001 microseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "192.168.1.188|Oracle Corporation|1.8.0_231|881605869"]
+	timestampResolution = 1001 microseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "DESKTOP-UCLPPU5|Oracle Corporation|1.8.0_231|881605869"]
+	timestampResolution = 1001 microseconds
+	minRacyThreshold = 0 nanoseconds
